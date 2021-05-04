@@ -5,7 +5,7 @@ import { Form, Button } from 'react-bootstrap';
 
 const GifsData = ({ setCategories }) => {
 
-    const [inputValue, setInputValue] = useState('Buscar');
+    const [inputValue, setInputValue] = useState('');
     const handleInputChange = (e) => {
         setInputValue(e.target.value)
     }
