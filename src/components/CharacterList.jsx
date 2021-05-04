@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Character from './Character';
 import Error from './Error';
@@ -34,23 +34,23 @@ const CharacterList = () => {
     return (
         <div>
             {
-                loading ?(
+                loading ? (
                     <Loader />
                 ) : error ? (
                     <Error />
                 ) : (
-                   
-               
-                   <div className="container d-flex justify-content-center align-items-center h-100">
-                   <div className="row">
-                     {
-                    characters.map( (item) => (
-                       <div className="col-md-4 mt-3" key={item.char_id}>
-                         <Character key={item.char_id} data={item}/>
-                       </div>
-                     ))}
-                   </div>
-                 </div>
+
+
+                    <div className="container d-flex justify-content-center align-items-center h-100">
+                        <div className="row">
+                            {
+                                characters.map((item) => (
+                                    <div className="col-md-4 mt-3" key={item.char_id}>
+                                        <Character key={item.char_id} data={item} />
+                                    </div>
+                                ))}
+                        </div>
+                    </div>
                 )
             }
         </div>

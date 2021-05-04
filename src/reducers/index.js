@@ -1,14 +1,14 @@
 const reducer = (state, action) => {
 
-        switch(action.type){
-            case 'SET_CHARACTERS':
-                return {
-                    ...state,
-                    CharactersBraking:[ ...state.CharactersBraking, action.payload]
-                };
-            default:
-                return state;
-        }
+    switch (action.type) {
+        case 'SET_SECTION':
+            return {
+                ...state,
+                sectionActive: action.payload,
+            };
+        default:
+            return state;
+    }
 };
 
 export default reducer;

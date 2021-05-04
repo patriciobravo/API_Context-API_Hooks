@@ -8,18 +8,17 @@ import reducer from './reducers';
 import App from './routes/App';
 
 const initialState = {
-  CharactersBraking: [],
   sectionActive: 'Characters'
 }
 
 const composeEnhanders = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore( reducer, initialState, composeEnhanders(applyMiddleware(logger)));
+const store = createStore(reducer, initialState, composeEnhanders(applyMiddleware(logger)));
 
 ReactDOM.render(
-  <Provider store={store}>  
+  <Provider store={store}>
     <App />
-    </Provider>,
+  </Provider>,
   document.getElementById('root')
 );
 
